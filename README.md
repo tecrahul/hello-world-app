@@ -15,7 +15,7 @@ Follow the below instructions to downlaod the source code on your local machine 
 
 Firstly, clone the repository to your local machine:
 ```
-git clone https://github.com/yourusername/my-flask-app.git
+git clone https://github.com/tecrahul/my-flask-app.git
 ```
 
 
