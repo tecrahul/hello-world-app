@@ -5,7 +5,9 @@ This is a simple Python application build using the Flask framework that display
 ## Requirememnts
 
 - Python 3.9 or higher
+- python3-dotenv package must be installed
 - Docker (if running via Docker)
+- MySQL database with access credentails
 
 ## Getting Started
 
@@ -18,6 +20,11 @@ Firstly, clone the repository to your local machine:
 git clone https://github.com/tecrahul/my-flask-app.git
 ```
 
+### Setup Database
+
+1. Create a database in mysql server
+2. Restore sampledb.sql file in database
+3. Copy .env.example as .env and update database details
 
 ### Manual Installation
 
