@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
-4. Navigate to `http://localhost:5000` in your web browser to view the application.
+4. Navigate to `http://localhost:8080` in your web browser to view the application.
 
 ### Docker Installation
 
@@ -52,6 +52,6 @@ docker build -t my-flask-app .
 ```
 2. Run the Docker container:
 ```
-docker run -p 5000:5000 my-flask-app
+docker run -p 8080:8080 my-flask-app
 ```
-3. Navigate to `http://localhost:5000` in your web browser to view the application.
+3. Navigate to `http://localhost:8080` in your web browser to view the application.
