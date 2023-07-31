@@ -22,29 +22,29 @@ git clone https://github.com/yourusername/my-flask-app.git
 ### Manual Installation
 
 1. Navigate into the cloned repository:
-
+```
 cd my-flask-app
-
+```
 2. Install the dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 3. Now you can run the server:
-
+```
 python app.py
-
-Navigate to `http://localhost:5000` in your web browser to view the application.
+```
+4. Navigate to `http://localhost:5000` in your web browser to view the application.
 
 ### Docker Installation
 
 You can also run this app as a Docker container.
 
-Build the Docker image:
-
+1. Build the Docker image:
+```
 docker build -t my-flask-app .
-
-Run the Docker container:
-
+```
+2. Run the Docker container:
+```
 docker run -p 5000:5000 my-flask-app
-
-Navigate to `http://localhost:5000` in your web browser to view the application.
+```
+3. Navigate to `http://localhost:5000` in your web browser to view the application.
