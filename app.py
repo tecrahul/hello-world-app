@@ -21,7 +21,11 @@ connection = pymysql.connect(host=MYSQL_HOST,
 
 app = Flask(__name__)
 
-@app.route('/api/<int:id>')
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+@app.route('/api/id/<int:id>')
 def get_student(id):
     try:
         with connection.cursor() as cursor:
@@ -38,4 +42,4 @@ def get_student(id):
         return jsonify({'error': 'Database error'}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
