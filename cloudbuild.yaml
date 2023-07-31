@@ -1,7 +1,11 @@
 steps:
 # This step will build and push new container image to Google Container Registry(GCR)
+- name: "gcr.io/cloud-builders/gsutil"    
+  args: ["cp", "gs://devops-secrets/env.txt", ".env"] 
+
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/devops', '.']
+ 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/devops']
 

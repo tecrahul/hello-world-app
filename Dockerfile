@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.10-alpine
+FROM python:3.9-slim-buster
 
 # Set the working directory in the container to /app
 WORKDIR /app
@@ -11,7 +11,7 @@ ADD . /app
 RUN pip install --no-cache-dir -r requirements.txt 
 
 # Make port 5000 available to the world outside this container
-EXPOSE 5000
+EXPOSE 8080
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
