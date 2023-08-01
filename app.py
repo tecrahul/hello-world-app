@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Home Page'
 
 @app.route('/api/id/<int:id>')
 def get_student(id):
