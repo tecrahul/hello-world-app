@@ -27,7 +27,6 @@ def teardown_request(exception):
     if hasattr(g, 'db'):
         g.db.close()
 
-
 @app.route('/')
 def hello_world():
     return 'Hello World!'
@@ -35,7 +34,7 @@ def hello_world():
 @app.route('/api/id/<int:id>')
 def get_student(id):
     try:
-        with connection.cursor() as cursor:
+        with g.db.cursor() as cursor:
             # Query the database
             sql = "SELECT * FROM Students WHERE Id = %s"
             cursor.execute(sql, (id,))
