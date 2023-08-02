@@ -12,6 +12,8 @@ MYSQL_USER = os.getenv('MYSQL_USER')
 MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
 MYSQL_DB = os.getenv('MYSQL_DB')
 
+app = Flask(__name__)
+
 @app.before_request
 def before_request():
     g.db = pymysql.connect(host=MYSQL_HOST,
@@ -25,7 +27,6 @@ def teardown_request(exception):
     if hasattr(g, 'db'):
         g.db.close()
 
-app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
