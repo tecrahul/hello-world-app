@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, g
 import pymysql.cursors
 import os
 from dotenv import load_dotenv
